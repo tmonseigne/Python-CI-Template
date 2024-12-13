@@ -3,3 +3,8 @@ pytest
 pytest-cov
 pytest-json
 pytest-json-report
+
+# Dépendances pour la documentation
+sphinx
+sphinx-autobuild
+sphinx-rtd-theme
