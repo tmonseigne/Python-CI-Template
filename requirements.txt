@@ -1,2 +1,5 @@
 # Dépendances pour les Tests
 pytest
+pytest-cov
+pytest-json
+pytest-json-report
