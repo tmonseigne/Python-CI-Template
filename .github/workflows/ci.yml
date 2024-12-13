@@ -1,0 +1,46 @@
+name: Template CI   # Nom du workflow
+
+# Définition de la méthode de lancement du workflow (à quel moment et sur quelle branche)
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:  # Permet d'exécuter le workflow manuellement depuis l'onglet Actions
+
+# Liste des routines qui seront lancées
+jobs:
+  Test:
+    name: Tests on ${{ matrix.platform }} for Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.platform }} # Environnement (OS) de la routine
+    timeout-minutes: 30 # Limite la durée de la routine
+    strategy:
+      fail-fast: false # Continue les autres routines si une matrice échoue.
+      matrix:         # Définition de la matrice de test (ici, pour les 3 OS et 2 versions de python donc 6 lancements)
+        platform: [ ubuntu-latest, windows-latest, macos-latest ]
+        python-version: ["3.12", "3.13"]
+
+    steps:
+      # Récupération du dépot dans l'environnement
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Installation de Python
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # Installation des dépendances du projet
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      # Lancement des tests avec pytest
+      - name: Run tests with pytest
+        uses: aganders3/headless-gui@v2
+        with:
+          run: python -m pytest
