@@ -60,6 +60,7 @@ jobs:
       - name: Manage Test Reports
         run: |
           python ./docs/tools/pytest_json_to_rst.py ./reports/test_report.json ./reports/test_report_ci_${{ matrix.platform }}_${{ matrix.python-version }}.rst
+          mv ./reports/monitoring.html ./reports/monitoring_ci_${{ matrix.platform }}_${{ matrix.python-version }}.html
         continue-on-error: true  # Permet de continuer même si cette étape échoue
 
       # Conserve en tant qu'artefact les rapports de test pour une utilisation ultérieure
@@ -69,6 +70,7 @@ jobs:
           name: reports
           path: |
             reports/test_report_ci_*.rst
+            reports/monitoring_ci_*.html
         continue-on-error: true  # Permet de continuer même si cette étape échoue
 
       # Upload du test sur codecov.io (nécessite l'ajout d'une variable secrete)

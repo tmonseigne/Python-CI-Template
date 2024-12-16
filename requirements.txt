@@ -1,4 +1,13 @@
-# Dépendances pour les Tests
+# Dépendances du module
+colorama    # Permet l'affichage de la couleur dans la console
+numpy       # Bibliothèque baique de python
+pandas      # Bibliothèque necessaire pour plotly
+plotly      # Permet la création de graphiques intéractifs pour le monitoring
+psutil      # Permet la récupération des informations systèmes pour le monitoring
+py-cpuinfo  # Permet la récupération des informations du CPU pour le monitoring
+GPUtil      # Permet la récupération des informations du GPU pour le monitoring
+
+# Dépendances pour les Tests (pytest et ses "plugins")
 pytest
 pytest-cov
 pytest-json
@@ -9,4 +18,4 @@ pytest-metadata
 sphinx
 sphinx-autobuild
 sphinx-rtd-theme
-ansi2html
+ansi2html  # Convertisseur ANSI vers HTML

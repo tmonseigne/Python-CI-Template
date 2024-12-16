@@ -67,9 +67,9 @@ def generate_rst_from_json(src: str, dst: str):
 
 	with open(dst, 'w', encoding="utf-8") as f:
 		f.write(f"{title}\n{"=" * len(title)}\n\n")
-		# f.write(get_metadata(data["metadata"]))
+		f.write(get_metadata(data["metadata"]))
 		f.write(get_summary(data))
-		# f.write(get_monitoring(monitoring))
+		f.write(get_monitoring(monitoring))
 		f.write(get_tests(data["tests"]))
 
 
