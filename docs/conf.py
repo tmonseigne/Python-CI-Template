@@ -54,3 +54,17 @@ autodoc_member_order = "bysource"
 todo_include_todos = True
 
 suppress_warnings = ["autosectionlabel.*"]
+
+
+##################################################
+# Spécifie les répertoires source et destination
+def copy_dir(src, dst):
+	# Copie les fichiers si le dossier source existe
+	if os.path.exists(src):
+		# Crée le dossier de destination s'il n'existe pas.
+		os.makedirs(dst, exist_ok=True)
+		# Copie récursivement les fichiers du dossier source vers le dossier de destination.
+		shutil.copytree(src, dst, dirs_exist_ok=True)
+
+
+copy_dir('reports', '_build/html/reports')

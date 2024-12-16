@@ -10,3 +10,4 @@ Python CI with monitoring Template
    user
    license
    generated/modules
+   tests
