@@ -2,7 +2,7 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-      - id: check-docstring-first       # Vérifie une erreur courante consistant à placer du code avant la docstring.
+      - id: check-docstring-first       # Vérifie une erreur courante consistant à placer du code avant le docstring.
       - id: check-builtin-literals      # Exige une syntaxe littérale lors de l'initialisation de types intégrés Python vides ou nuls.
       - id: check-case-conflict         # Recherche les fichiers dont les noms pourraient être en conflit sur un système de fichiers insensible à la casse.
       - id: check-illegal-windows-names # Recherche les fichiers qui ne peuvent pas être créés sous Windows.
@@ -14,4 +14,4 @@ repos:
       - id: name-tests-test             # Vérifie que les fichiers de test sont nommés correctement.
         args : [--pytest-test-first]    # Assure que les fichiers de tests correspondent au style `test_.*\.py`.
       - id: trailing-whitespace         # Supprime les espaces de fin de ligne.
-        args: [--markdown-linebreak-ext=md]  # Exception pour les fichiers markdown.
+        args: [--markdown-linebreak-ext=md]  # Exception pour les fichiers Markdown.

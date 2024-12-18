@@ -100,7 +100,7 @@ class Monitoring:
 	def _update(self):
 		""" Met à jour les valeurs d'utilisation du CPU, de la mémoire et du disque en fonction des processus en cours. """
 		# Sélection de processus
-		pytest_pid = os.getpid()  						 # PID de pytest
+		pytest_pid = os.getpid()  						 # PID de Pytest
 		pytest_proc = psutil.Process(pytest_pid)		 # Récupère le processus parent
 		children = pytest_proc.children(recursive=True)  # Cible les processus enfants
 		processes = [pytest_proc] + children			 # Inclut le processus principal et ses enfants

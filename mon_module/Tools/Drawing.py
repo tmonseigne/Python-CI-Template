@@ -32,7 +32,7 @@ def get_color_map_by_name(names: list[str], palette: list[str] = px.colors.quali
 	Si le nombre de fichiers dépasse le nombre de couleurs disponibles dans la palette, elle réutilise les couleurs de manière cyclique.
 
 	:param names: Liste des noms des fichiers pour lesquels une couleur doit être attribuée.
-	:param palette: Liste des couleurs à utiliser pour les fichiers. Si non spécifié, la palette `Plotly` est utilisée par défaut.
+	:param palette: Liste des couleurs à utiliser pour les fichiers. Si non spécifiée, la palette `Plotly` est utilisée par défaut.
 	:return: Un dictionnaire où les clés sont les noms de fichiers et les valeurs sont les couleurs attribuées.
 	"""
 	unique_names = set(names)  # Récupérer les noms uniques

@@ -6,5 +6,4 @@
 [![codecov](https://codecov.io/github/tmonseigne/Python-CI-Template/graph/badge.svg?token=KSQ8lfMZW8)](https://codecov.io/github/tmonseigne/Python-CI-Template)
 [![Documentation Status](https://img.shields.io/badge/Documentation-Online-brightgreen)](https://tmonseigne.github.io/Python-CI-Template/)
 
-
 Template For Python module with GitHub Action Workflow CI and resources monitoring.

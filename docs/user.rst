@@ -61,7 +61,7 @@ Un environnement virtuel permet de gérer les dépendances du projet de manière
 2. Assurez-vous que l'environnement virtuel est activé si vous le souhaitez (voir Étape 3).
 3. Installez les dépendances nécessaires avec la commande : :console:`python -m pip install -r requirements.txt`
 
-C'est terminé ! 🎉 Vous avez installé et configuré python pour votre module avec succès.
+C'est terminé ! 🎉 Vous avez installé et configuré Python pour votre module avec succès.
 
 Utilisation
 -----------
